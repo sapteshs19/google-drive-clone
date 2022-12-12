@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8"/>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <!--compiled and minifired css-->
+        <link 
+           rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+
+        <link 
+               href="https://fonts.googleapis.com/icon?family=Material+Icons "
+               rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css"/>
+        <title>Google Drive</title>
+    </head>
+    <body>
+        <div class="navbar-fixed">
+            <nav class="nav-extended white">
+                <div class="nav-wrapper white">
+                    <ul>
+                        <li>
+                            <a href="#!" class="title grey-text text-darken-1"
+                                >Google Drive</a
+                            >
+                        </li>
+                    </ul>
+                    <div class="search-wrapper">
+                        <i class="material-icons">search</i>
+                        <input type="search" name="search" placeholder="Search Drive"/>
+                    </div>
+                    <ul class="right">
+                        <li>
+                           <a href="#!"
+                             ><i class="material-icons grey-text text-darken-1">apps</i></a
+                            > 
+                        </li>
+                        <li>
+                            <a href="#!"
+                                ><i class="material-icons grey-text text-darken-1"
+                                 >notifications</i
+                                ></a
+                            >           
+                        </li>
+                        <li>
+                            <a href="#!"
+                             ><img 
+                                src="data:image/jpeg;base64,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" 
+                                alt="profile pic" 
+                                class="circle"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-wrapper nav-2">
+                    <ul>
+                        <li>
+                            <a 
+                                href="#!"
+                                class="waves-effect waves-light btn btn-flat white-text"
+                                >New</a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="#!"
+                                ><i class="material-icons grey text text darken-1"
+                                    >view_list</i
+                                ></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#!"
+                             ><i class="material-icons grey-text text darken-1">info</i></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#!"
+                              ><i class="material-icons grey-text text-darken-1"
+                               >settings</i
+                               ></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>           
+        </div>
+        <ul class="side-nav fixed floating transparent z-depth-0">
+            <li class="active">
+                <a href="#"
+                 ><i class="material-icons blue-text text-darken-1">dashboard</i> My
+                  Drive</a
+                 >
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">devices</i>Computer</a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">people</i>Shared with me</a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">access_time</i>Recent</a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">camera</i>Google photos</a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">star</i>Starred</a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">delete</i>Trash</a>
+            </li>
+            <li><div class="divider"></div></li>
+            <li>
+                <a href="#"><i class="material-icons">cloud</i>Backup</a>
+            </li>
+            <li><div class="divider"></div></li>
+            <li>
+                <a href="#"><i class="material-icons">storage</i>Upgrade storage</a>
+            </li>           
+        </ul>
+        <div class="main">
+            <div class="container-fluid">
+                <p class="subheader">Folders</p>
+                <div class="card-panel folder">
+                    <i class="material-icons left">folder</i>Folder                   
+                </div>
+                <div class="card-panel folder">
+                    <i class="material-icons left">folder</i>Folder
+                </div>
+                <div class="card-panel folder">
+                    <i class="material-icons left">folder</i>Folder
+                </div>
+                <div class="card-panel folder">
+                    <i class="material-icons left">folder</i>Folder
+                </div>
+            </div>
+        </div>
+    </body>
+    <!--Compiled and minified JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.css"></script>
+</html>
